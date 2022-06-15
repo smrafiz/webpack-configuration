@@ -30,6 +30,7 @@ module.exports = {
 		'dist/**/*.js',
 		'tests/**/*.js',
 		'temp.js',
+		'webpack.config.js',
 		'/vendor/**/**/*.js',
 		'/webpack/*.js',
 		'/node_modules/**/**/*.js',
