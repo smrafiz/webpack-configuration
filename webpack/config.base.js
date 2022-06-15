@@ -11,6 +11,7 @@ const WebpackBar = require('webpackbar'); // Display elegant progress bar while 
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin'); // To optimize (compress) all images using
 const CopyPlugin = require('copy-webpack-plugin'); // For WordPress we need to copy images from src to public to optimize them
 const RemovePlugin = require('remove-files-webpack-plugin');
+const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
 
 module.exports = (projectOptions) => {
 	/**
@@ -124,6 +125,9 @@ module.exports = (projectOptions) => {
 				root: projectOptions.projectOutput + '/js',
 				include: removeFiles,
 			},
+		}),
+		new WebpackBuildNotifierPlugin({
+			title: 'WordPress Project',
 		}),
 	];
 	// Add browserSync to plugins if enabled
