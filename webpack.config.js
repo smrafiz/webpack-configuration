@@ -95,7 +95,6 @@ const projectFiles = {
 		eslint: true, // enable or disable eslint  | this is only enabled in development env.
 		filename: 'js/[name].min.js',
 		entry: jsFiles,
-		// entryMin: jsFilesMin,
 		rules: {
 			test: /\.m?js$/,
 		},
@@ -107,7 +106,6 @@ const projectFiles = {
 		filename: 'css/[name].min.css',
 		use: 'sass', // sass || postcss
 		entry: cssFiles,
-		// entryMin: cssFilesMin,
 		// ^ If you want to change from Sass to PostCSS or PostCSS to Sass then you need to change the
 		// styling files which are being imported in "assets/src/js/frontend.js" and "assets/src/js/backend.js".
 		// So change "import '../sass/backend.scss'" to "import '../postcss/backend.pcss'" for example
@@ -118,19 +116,6 @@ const projectFiles = {
 			postcss: {
 				test: /\.pcss$/i,
 			},
-		},
-		purgeCss: {
-			// PurgeCSS is only being activated in production environment
-			paths: [
-				// Specify content that should be analyzed by PurgeCSS
-				__dirname + '/src/js/**/*',
-				__dirname + '/app/**/**/*',
-				__dirname + '/templates/**/**/*',
-				__dirname + '/template-parts/**/**/*',
-				__dirname + '/blocks/**/**/*',
-				__dirname + '/*.php',
-				__dirname + '/*.html',
-			],
 		},
 	},
 	// Source Maps configurations
