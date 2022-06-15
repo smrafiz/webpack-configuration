@@ -24,7 +24,10 @@ module.exports = (projectOptions) => {
 		exclude: /(node_modules|bower_components|vendor)/,
 		use: [
 			MiniCssExtractPlugin.loader, // Creates `style` nodes from JS strings
-			'css-loader', // Translates CSS into CommonJS
+			{
+				loader: 'css-loader',
+				options: { sourceMap: true, url: false },
+			}, // Translates CSS into CommonJS
 			{
 				// loads the PostCSS loader
 				loader: 'postcss-loader',
@@ -42,9 +45,9 @@ module.exports = (projectOptions) => {
 			loader: 'sass-loader',
 			options: {
 				sassOptions: { importer: magicImporter() }, // add magic import functionalities to sass
+				sourceMap: true,
 			},
 		});
-	}
 
 	/**
 	 * JavaScript rules
@@ -142,8 +145,9 @@ module.exports = (projectOptions) => {
 		plugins.push(
 			new BrowserSyncPlugin(browserSyncOptions, {
 				reload: projectOptions.browserSync.reload,
-				injectCss: projectOptions.browserSync.injectCss,
+				injectChanges: projectOptions.browserSync.injectCss,
 				watchEvents: ['change', 'add', 'unlink', 'addDir', 'unlinkDir'],
+				watch: true,
 			})
 		);
 	}
