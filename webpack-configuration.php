@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Webpack Configuration
- * Plugin URI: http://demo.radiustheme.com/wordpress/plugins/food-menu/
+ * Plugin URI: https://github.com/smrafiz/my-plugin-boilerplate/
  * Description: Webpack configuration for WordPress projects.
  * Author: S.M. Rafiz
  * Version: 1.0.0

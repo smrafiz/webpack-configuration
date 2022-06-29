@@ -49,6 +49,7 @@ module.exports = (projectOptions) => {
 				sourceMap: true,
 			},
 		});
+	}
 
 	/**
 	 * JavaScript rules
@@ -100,10 +101,12 @@ module.exports = (projectOptions) => {
 			reporters: ['profile'],
 			profile: true,
 		}),
+
 		new MiniCssExtractPlugin({
 			// Extracts CSS files
 			filename: projectOptions.projectCss.filename,
 		}),
+
 		new CopyPlugin({
 			// Copies images from src to public
 			patterns: [
@@ -113,10 +116,12 @@ module.exports = (projectOptions) => {
 				},
 			],
 		}),
+
 		new ImageMinimizerPlugin({
 			// Optimizes images
 			minimizerOptions: projectOptions.projectImages.minimizerOptions,
 		}),
+
 		new RemovePlugin({
 			/**
 			 * After compilation permanently remove empty JS files created from CSS entries.
@@ -126,6 +131,7 @@ module.exports = (projectOptions) => {
 				include: removeFiles,
 			},
 		}),
+
 		new WebpackBuildNotifierPlugin({
 			title: 'WordPress Project',
 		}),
