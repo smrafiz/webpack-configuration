@@ -48,7 +48,9 @@ const projectConfiguration = {
 	textDomain: conf.textDomain,
 	translationSrc: conf.translationSrc,
 	translationDirectory: conf.translationDirectory,
+	proxy: conf.localhost,
 	localhost: conf.localhost,
+	bsEnable: conf.browserSyncEnable,
 
 	/**
 	 * CSS File name
@@ -76,11 +78,11 @@ projectConfiguration.js.forEach((file) => {
 const projectFiles = {
 	// BrowserSync settings
 	browserSync: {
-		enable: true, // enable or disable browserSync
+		enable: projectConfiguration.bsEnable, // enable or disable browserSync
 		host: 'localhost',
 		port: 3000,
 		mode: 'proxy', // proxy | server
-		server: { baseDir: ['public'] }, // can be ignored if using proxy
+		server: true, // can be ignored if using proxy
 		proxy: projectConfiguration.localhost,
 		// BrowserSync will automatically watch for changes to any files connected to our entry,
 		// including both JS and Sass files. We can use this property to tell BrowserSync to watch

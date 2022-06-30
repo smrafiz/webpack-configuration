@@ -40,7 +40,7 @@ module.exports = (dir) => {
 		buildIncludes: [
 			'assets',
 			'index.html',
-			path.basename(path.resolve(dir)) + '.php', // plugin slug.php.
+			path.basename(path.resolve(dir)) + '.php', // plugin-slug.php.
 		],
 
 		/**
@@ -49,11 +49,16 @@ module.exports = (dir) => {
 		packageName: 'webpack-configuration',
 		textDomain: 'webpack-configuration',
 		translationSrc: '**/**/**/*.php',
-		translationDirectory: 'languages/webpack-configuration.pot',
+		translationDirectory:
+			/**
+			 * languages/plugin-slug.pot
+			 */
+			'languages/' + path.basename(path.resolve(dir)) + '.pot',
 
 		/**
-		 * Server.
+		 * Browser Sync.
 		 */
-		localhost: 'http://sample.local/',
+		browserSyncEnable: true,
+		localhost: 'http://latest.test/',
 	};
 };
