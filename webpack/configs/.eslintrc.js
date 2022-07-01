@@ -32,7 +32,7 @@ module.exports = {
 		'temp.js',
 		'webpack.config.js',
 		'/vendor/**/**/*.js',
-		'/webpack/*.js',
+		'/webpack/**/*.js',
 		'/node_modules/**/**/*.js',
 	],
 };

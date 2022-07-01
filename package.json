@@ -19,14 +19,14 @@
 		"translate": "wp-pot --src '**/**/**/*.php' --dest-file 'languages/my-plugin.pot' --package 'my-plugin' --domain 'my-plugin' --last-translator '{{author_name}} <{{author_email}}>' --team '{{author_name}} <{{author_email}}>' --bug-report '{{author_url}}'"
 	},
 	"babel": {
-		"extends": "./webpack/babel.config.js"
+		"extends": "./webpack/configs/babel.config.js"
 	},
 	"eslintConfig": {
 		"extends": [
-			"./webpack/.eslintrc.js"
+			"./webpack/configs/.eslintrc.js"
 		]
 	},
-	"prettier": "./webpack/.prettierrc.js",
+	"prettier": "./webpack/configs/.prettierrc.js",
 	"stylelint": {
 		"ignoreFiles": [
 			"./assets/css/**/*.css",
@@ -36,7 +36,7 @@
 			"./dist/**/**/*.css"
 		],
 		"extends": [
-			"./webpack/.stylelintrc.js"
+			"./webpack/configs/.stylelintrc.js"
 		]
 	},
 	"keywords": [],

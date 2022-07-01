@@ -15,7 +15,7 @@ const projectPaths = {
 	projectDir: __dirname,
 	projectSlug: path.basename(path.resolve(__dirname)),
 	projectRoot: path.resolve(__dirname),
-	projectWebpack: path.resolve(__dirname, 'webpack'),
+	projectWebpack: path.resolve(__dirname, 'webpack/configs'),
 
 	/**
 	 * Source directory Setup.
@@ -175,7 +175,7 @@ const projectOptions = {
 // on the script from package.json
 module.exports = (env) => {
 	if (env.NODE_ENV === 'distribution') {
-		return require('./webpack/config.distribution')(projectOptions);
+		return require('./webpack/configs/config.distribution')(projectOptions);
 	}
 
 	if (env.NODE_ENV === 'production') {
@@ -188,8 +188,8 @@ module.exports = (env) => {
 			src: projectOptions.projectConfig.src,
 		});
 
-		return require('./webpack/config.production')(projectOptions);
+		return require('./webpack/configs/config.production')(projectOptions);
 	}
 
-	return require('./webpack/config.development')(projectOptions);
+	return require('./webpack/configs/config.development')(projectOptions);
 };
