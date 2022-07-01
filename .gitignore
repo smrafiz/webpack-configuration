@@ -82,3 +82,5 @@ _ext_dev
 dist
 assets
 languages/webpack-configuration.pot
+.eslintcache
+.stylelintcache

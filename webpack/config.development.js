@@ -68,11 +68,11 @@ module.exports = (projectOptions) => {
 	];
 	// Add eslint to plugins if enabled
 	if (projectOptions.projectJs.eslint === true) {
-		plugins.push(new ESLintPlugin());
+		plugins.push(new ESLintPlugin({ cache: true }));
 	}
 	// Add stylelint to plugins if enabled
 	if (projectOptions.projectJs.eslint === true) {
-		plugins.push(new StylelintPlugin());
+		plugins.push(new StylelintPlugin({ cache: true }));
 	}
 
 	/***
