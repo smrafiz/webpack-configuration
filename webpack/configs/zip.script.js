@@ -1,6 +1,6 @@
 /**
- * This holds the configuration that is being used for production.
- * This is being imported and extended in the config.production.js files
+ * This file holds the configuration that is being used for production zip.
+ * This is being imported and extended in the config.distribution.js files
  *
  * @since 1.0.0
  */

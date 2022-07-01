@@ -1,7 +1,7 @@
 /**
  * Webpack configurations for the distribution environment
  * based on the script from package.json
- * Run with: "npm run prod" or or "npm run prod:watch"
+ * Run with: "npm run zip"
  *
  * @since 1.0.0
  */

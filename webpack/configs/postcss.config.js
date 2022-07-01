@@ -1,6 +1,6 @@
 /**
  * PostCSS configuration file
- * as configured under cssRules.use['postcss-loader'] in development.js and production.js
+ * as configured under cssRules.use['postcss-loader'] in development.js, production.js and distribution.js
  *
  * @param  projectOptions
  * @see https://postcss.org/

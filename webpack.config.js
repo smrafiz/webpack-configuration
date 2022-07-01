@@ -1,5 +1,5 @@
 /**
- * This is a main entrypoint for Webpack config.
+ * This is the main entrypoint for Webpack configuration.
  *
  * @since 1.0.0
  */

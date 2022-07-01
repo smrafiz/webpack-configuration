@@ -1,1 +1,1 @@
-# webpack-configuration
+# wp-webpack-configuration

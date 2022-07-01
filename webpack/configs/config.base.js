@@ -1,6 +1,6 @@
 /**
- * This holds the configuration that is being used for both development and production.
- * This is being imported and extended in the config.development.js and config.production.js files
+ * This file holds the configuration that is being used for both development and production.
+ * This is being imported and extended in the config.development.js, config.production.js and config.distribution.js files
  *
  * @since 1.0.0
  */

@@ -1,5 +1,6 @@
 /**
- * This holds the custom project configuration.
+ * This file holds the custom project configuration.
+ * Feel free to edit as per your requirement.
  *
  * @since 1.0.0
  */
@@ -46,8 +47,8 @@ module.exports = (dir) => {
 		/**
 		 * Translation.
 		 */
-		packageName: 'webpack-configuration',
-		textDomain: 'webpack-configuration',
+		packageName: 'wp-webpack-configuration',
+		textDomain: 'wp-webpack-configuration',
 		translationSrc: '**/**/**/*.php',
 		translationDirectory:
 			/**
