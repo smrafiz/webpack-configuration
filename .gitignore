@@ -80,3 +80,5 @@ composer.lock
 yarn.lock
 _ext_dev
 dist
+assets
+languages/webpack-configuration.pot

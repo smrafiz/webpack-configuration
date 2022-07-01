@@ -136,6 +136,7 @@ module.exports = (projectOptions) => {
 			title: 'WordPress Project',
 		}),
 	];
+
 	// Add browserSync to plugins if enabled
 	if (projectOptions.browserSync.enable === true) {
 		const browserSyncOptions = {
