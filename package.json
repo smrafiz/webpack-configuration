@@ -8,7 +8,7 @@
 		"prod": "webpack --env NODE_ENV=production --env production",
 		"prod:watch": "webpack --env NODE_ENV=production --env production --watch",
 		"dev": "webpack --env NODE_ENV=development",
-		"dist": "npm run prod && webpack --env NODE_ENV=distribution",
+		"zip": "npm run prod && webpack --env NODE_ENV=distribution",
 		"dev:watch": "webpack --env NODE_ENV=development --watch",
 		"eslint": "eslint src/js/**/*.js",
 		"eslint:fix": "eslint src/js/**/*.js --fix",
