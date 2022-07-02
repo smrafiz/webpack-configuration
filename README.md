@@ -7,10 +7,9 @@
 ![Sass 1.53.0](https://img.shields.io/badge/Sass-1.53.0-brightgreen)
 ![ESLint 8.18.0](https://img.shields.io/badge/ESLint-8.18.0-brightgreen)
 
-<br />
 <hr />
 
-**This is a modified version of brandonkramer's [**WordPress Webpack v5 Workflow**](https://github.com/brandonkramer/wordpress-webpack-workflow#wordpress-webpack-v5-workflow).**
+**This is a modified version of brandonkramer's [**WordPress Webpack v5 Workflow**](https://github.com/brandonkramer/wordpress-webpack-workflow#wordpress-webpack-v5-workflow). All credits goes to him.**
 <hr />
 <br />
 
@@ -28,8 +27,8 @@ Includes WebPack v5, BabelJS v7, BrowserSync v2, PostCSS v8, Autoprefixer, Eslin
 ## Quickstart
 
 ```bash
-1. Run the npx script to get the files
-     npx wp-strap webpack
+1. Run the npm command to get the files
+     npm i -D wp-webpack-configuration
 2. Edit the configuration settings in `webpack/project.config.js`
 3. Start your npm build workflow with one of these commands:
 
@@ -50,13 +49,6 @@ yarn zip
 >- **Sourcemaps** generation for debugging purposes with [various styles of source mapping](https://webpack.js.org/configuration/devtool/) handled by WebPack
 >- [**Stylelint**](https://stylelint.io/) that helps you avoid errors and enforce conventions in your styles. It includes a [linting tool for Sass](https://github.com/kristerkari/stylelint-scss).
 
-**Styling when using PostCSS-only**
->- Includes [**postcss-import**](https://github.com/postcss/postcss-import) to consume local files, node modules or web_modules with the @import statement
->- Includes [**postcss-import-ext-glob**](https://github.com/dimitrinicolas/postcss-import-ext-glob) that extends postcss-import path resolver to allow glob usage as a path
->- Includes [**postcss-nested**](https://github.com/postcss/postcss-nested) to unwrap nested rules like how Sass does it.
->- Includes [**postcss-nested-ancestors**](https://github.com/toomuchdesign/postcss-nested-ancestors) that introduces ^& selector which let you reference any parent ancestor selector with an easy and customizable interface
->- Includes [**postcss-advanced-variables**](https://github.com/jonathantneal/postcss-advanced-variables) that lets you use Sass-like variables, conditionals, and iterators in CSS.
-
 
 **Styling when using Sass+PostCSS**
 > - **Sass to CSS conversion** using Webpack's [**sass-loader**](https://webpack.js.org/loaders/sass-loader/)
@@ -66,7 +58,6 @@ yarn zip
 **JavaScript**
 > - [**BabelJS**](https://babeljs.io/) Webpack loader to use next generation Javascript with a  **BabelJS Configuration file**
 >- **Minification** in production mode
->- [**Code Splitting**](https://webpack.js.org/guides/code-splitting/), being able to structure JavaScript code into modules & bundles
 >- **Sourcemaps** generation for debugging purposes with [various styles of source mapping](https://webpack.js.org/configuration/devtool/) handled by WebPack
 >- [**ESLint**](https://eslint.org/) find and fix problems in your JavaScript code with a  **linting configuration** including configurations and custom rules for WordPress development.
 >- [**Prettier**](https://prettier.io/) for automatic JavaScript / TypeScript code **formatting**
@@ -88,9 +79,14 @@ yarn zip
 >- [**BrowserSync**](https://browsersync.io/), synchronising browsers, URLs, interactions and code changes across devices and automatically refreshes all the browsers on all devices on changes
 >- [**WebPackBar**](https://github.com/nuxt/webpackbar) so you can get a real progress bar while development which also includes a **profiler**
 
+**Production Zip file**
+>- Create production ready Zip file
+>- Include the files and folders of your choice
+>- Zip file will read the version from the plugin main php file and include it in the zip
+
 **Configuration**
 
-> - All configuration files `.prettierrc.js`, `.eslintrc.js`, `.stylelintrc.js`, `babel.config.js`, `postcss.config.js` are organised in a single folder
+>- All configuration files `.prettierrc.js`, `.eslintrc.js`, `.stylelintrc.js`, `babel.config.js`, `postcss.config.js` are organised in a single folder
 >- The Webpack configuration is divided into 2 environmental config files for the development and production build/environment
 
 ## Requirements
@@ -104,20 +100,20 @@ yarn zip
 ```bash
 ├── package.json                     # Node.js dependencies & scripts (NPM functions)
 ├── webpack.config.js                # Holds all the base Webpack configurations
-├── webpack                          # Folder that holds all the sub-config files
-|   ├── project.config.js            # Custom project configuration
-|   ├── configs
-|   │   ├── .prettierrc.js           # Configuration for Prettier
-|   │   ├── .eslintrc.js             # Configuration for Eslint
-|   │   ├── .stylelintrc.js          # Configuration for Stylelint
-|   │   ├── babel.config.js          # Configuration for BabelJS
-|   │   ├── postcss.config.js        # Configuration for PostCSS
-|   │   ├── zip.script.js            # Configuration for building .zip file
-|   │   ├── config.base.js           # Base config for Webpack's development & production mode
-|   │   ├── config.development.js    # Configuration for Webpack in development mode
-|   │   ├── config.production.js     # Configuration for Webpack in production mode
-|   │   ├── config.distribution.js   # Configuration for Webpack in production mode and build zip file
-├──languages                         # WordPress default language map in Plugins & Themes
+├── webpack                          # Folder that holds config file and sub-config folder
+│   ├── project.config.js            # Custom project configuration
+│   ├── configs                      # Folder that holds all the sub-config files
+│   │   ├── .prettierrc.js           # Configuration for Prettier
+│   │   ├── .eslintrc.js             # Configuration for Eslint
+│   │   ├── .stylelintrc.js          # Configuration for Stylelint
+│   │   ├── babel.config.js          # Configuration for BabelJS
+│   │   ├── postcss.config.js        # Configuration for PostCSS
+│   │   ├── zip.script.js            # Configuration for building .zip file
+│   │   ├── config.base.js           # Base config for Webpack's development & production mode
+│   │   ├── config.development.js    # Configuration for Webpack in development mode
+│   │   ├── config.production.js     # Configuration for Webpack in production mode
+│   │   ├── config.distribution.js   # Configuration for Webpack in production mode and build zip file
+├──languages                         # WordPress default language map in Plugins
 │   ├── wp-wordpress-webpack.pot     # Boilerplate POT File that gets overwritten by WP-Pot
 └──assets
     ├── src                          # Holds all the source files
@@ -137,11 +133,10 @@ yarn zip
 
 ## What to configure
 
-1. Edit the translate script in package.json with your project data
-    - If you use `npx wp-strap webpack` to get the files then this will be done automatically with you terminal input.
+1. Edit the /webpack/project.config.js with your project data
 2. Edit the BrowserSync settings in `webpack.config.js` which applies to your local/server environment.
     - You can also disable BrowserSync, Eslint & Stylelint in `webpack.config.js`.
-3. The workflow is ready to start, you need to configure `/webpack/project.config.js` and may want to configure the files in `/webpack/configs/` to better suite your needs.
+3. The workflow is ready to start, you may want to configure the files in `/webpack/configs/` to better suite your needs.
 
 ## Developing Locally
 
@@ -206,7 +201,7 @@ yarn translate
 ```
 
 ## WordPress Plugin Webpack Workflow's Changelog
-#### July 03, 2021
+#### July 03, 2022
 * Initial release
 
 ___
