@@ -39,6 +39,8 @@ yarn prod:watch
 yarn zip
 ```
 
+<a href="#what-to-configure">Read more about the configuration & build scripts</a>
+
 ## Features & benefits
 
 **Styling (CSS)**
