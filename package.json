@@ -4,7 +4,7 @@
 	"description": "WebPack workflow to kickstart your WordPress projects.",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "echo \"No test specified\"",
 		"prod": "webpack --env NODE_ENV=production --env production",
 		"prod:watch": "webpack --env NODE_ENV=production --env production --watch",
 		"dev": "webpack --env NODE_ENV=development",

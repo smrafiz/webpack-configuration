@@ -33,14 +33,13 @@ module.exports = (dir) => {
 		/**
 		 * JS File name
 		 */
-		js: ['app'],
+		js: ['frontend', 'backend'],
 
 		/**
 		 * Files & folders to be added to zip file.
 		 */
 		buildIncludes: [
 			'assets',
-			'index.html',
 			path.basename(path.resolve(dir)) + '.php', // plugin-slug.php.
 		],
 
