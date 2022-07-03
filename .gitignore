@@ -81,6 +81,6 @@ yarn.lock
 _ext_dev
 dist
 assets
-languages/wp-webpack-configuration.pot
+languages/wp-plugin-webpack-configuration.pot
 .eslintcache
 .stylelintcache

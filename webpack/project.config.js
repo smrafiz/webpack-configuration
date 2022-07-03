@@ -46,8 +46,8 @@ module.exports = (dir) => {
 		/**
 		 * Translation.
 		 */
-		packageName: 'wp-webpack-configuration',
-		textDomain: 'wp-webpack-configuration',
+		packageName: 'wp-plugin-webpack-configuration',
+		textDomain: 'wp-plugin-webpack-configuration',
 		translationSrc: '**/**/**/*.php',
 		translationDirectory:
 			/**

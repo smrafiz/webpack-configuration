@@ -28,7 +28,7 @@ Includes WebPack v5, BabelJS v7, BrowserSync v2, PostCSS v8, Autoprefixer, Eslin
 
 ```bash
 1. Run the npm command to get the files
-     npm i -D wp-webpack-configuration
+     npm i -D wp-plugin-webpack-configuration
 2. Edit the configuration settings in `webpack/project.config.js`
 3. Start your npm build workflow with one of these commands:
 
@@ -138,7 +138,7 @@ yarn zip
 1. Edit the `/webpack/project.config.js` with your project data. These settings are pretty self explanatory.
    - Source Directory represents the source css, js & images, Output Directory is where the compiled assets will go.
    - CSS & JS are the names (array) of the respective css & js file names. Note that, if you import css in your js file, no need to include it in the css array.
-   - buildIncludes is the list of files & folders you need to copy in production.
+   - buildIncludes is the list of files & folders you need to copy in production. You must need to include all the files & folders for production.
    - There are also some settings for translations and browserSync.
 2. Edit the BrowserSync settings in `webpack.config.js` which applies to your local/server environment.
     - You can also disable BrowserSync, Eslint & Stylelint in `webpack.config.js`.

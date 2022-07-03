@@ -1,5 +1,5 @@
 {
-	"name": "wp-webpack-configuration",
+	"name": "wp-plugin-webpack-configuration",
 	"version": "1.0.0",
 	"description": "WebPack workflow to kickstart your WordPress projects.",
 	"main": "index.js",
@@ -16,7 +16,7 @@
 		"stylelint:fix": "stylelint src/**/**/*.{css,scss,pcss} --fix",
 		"prettier": "prettier src/js/**/*.js",
 		"prettier:fix": "prettier --write src/js/**/*.js",
-		"translate": "wp-pot --src '**/**/**/*.php' --dest-file 'languages/wp-webpack-configuration.pot' --package 'wp-webpack-configuration' --domain 'wp-webpack-configuration' --last-translator 'SM Rafiz <s.m.rafiz@gmail.com>' --team 'SM Rafiz <s.m.rafiz@gmail.com>' --bug-report 'https://github.com/smrafiz/wp-webpack-configuration/issues'"
+		"translate": "wp-pot --src '**/**/**/*.php' --dest-file 'languages/wp-plugin-webpack-configuration.pot' --package 'wp-plugin-webpack-configuration' --domain 'wp-plugin-webpack-configuration' --last-translator 'SM Rafiz <s.m.rafiz@gmail.com>' --team 'SM Rafiz <s.m.rafiz@gmail.com>' --bug-report 'https://github.com/smrafiz/wp-plugin-webpack-configuration/issues'"
 	},
 	"babel": {
 		"extends": "./webpack/configs/babel.config.js"
