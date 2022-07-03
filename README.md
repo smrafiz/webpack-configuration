@@ -135,7 +135,11 @@ yarn zip
 
 ## What to configure
 
-1. Edit the `/webpack/project.config.js` with your project data
+1. Edit the `/webpack/project.config.js` with your project data. These settings are pretty self explanatory.
+   - Source Directory represents the source css, js & images, Output Directory is where the compiled assets will go.
+   - CSS & JS are the names (array) of the respective css & js file names. Note that, if you import css in your js file, no need to include it in the css array.
+   - buildIncludes is the list of files & folders you need to copy in production.
+   - There are also some settings for translations and browserSync.
 2. Edit the BrowserSync settings in `webpack.config.js` which applies to your local/server environment.
     - You can also disable BrowserSync, Eslint & Stylelint in `webpack.config.js`.
 3. The workflow is ready to start, you may want to configure the files in `/webpack/configs/` to better suite your needs.
