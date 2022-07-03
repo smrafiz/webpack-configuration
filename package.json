@@ -39,9 +39,9 @@
 			"./webpack/configs/.stylelintrc.js"
 		]
 	},
-	"keywords": [],
+	"keywords": ["WordPress", "Webpack", "Plugin Development", "Sass", "Babel", "BrowserSync", "ESLint", "StyleLint", "Prettier"],
 	"author": "SM Rafiz",
-	"license": "ISC",
+	"license": "MIT",
 	"devDependencies": {
 		"@babel/core": "^7.18.6",
 		"@babel/eslint-parser": "^7.18.2",
