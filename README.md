@@ -27,8 +27,8 @@ Includes WebPack v5, BabelJS v7, BrowserSync v2, PostCSS v8, Autoprefixer, Eslin
 ## Quickstart
 
 ```bash
-1. Run the npm command to get the files
-     npm i -D wp-plugin-webpack-configuration
+1. Run the git command to get the files
+    git clone https://github.com/smrafiz/wp-plugin-webpack-configuration.git
 2. Edit the configuration settings in `webpack/project.config.js`
 3. Start your npm build workflow with one of these commands:
 
