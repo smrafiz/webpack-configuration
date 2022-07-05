@@ -28,7 +28,7 @@ module.exports = (dir) => {
 		/**
 		 * CSS File name
 		 */
-		css: ['styles'],
+		css: ['example'],
 
 		/**
 		 * JS File name

@@ -1,10 +1,16 @@
+'use strict';
+
+import '../scss/frontend.scss';
+
 /**
  * Frontend JS.
  *
  */
 
-'use strict';
-
 $(document).ready(function () {
-	console.log('Hello From Frontend');
+	const frontend = {};
+
+	frontend.name = 'Hello from Frontend';
+
+	console.log(frontend);
 });

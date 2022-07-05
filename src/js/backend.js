@@ -8,5 +8,9 @@ import '../scss/backend.scss';
  */
 
 $(document).ready(function () {
-	console.log('Hello From Backend');
+	const backend = {};
+
+	backend.name = 'Hello from Backend';
+
+	console.log(backend);
 });
